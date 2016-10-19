@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
--include vendor/ZTE/X9180/BoardConfigVendor.mk
+-include vendor/NUBIA/NX404H/BoardConfigVendor.mk
 
-LOCAL_PATH := device/ZTE/X9180
+LOCAL_PATH := device/NUBIA/NX404H
 
 ifeq ($(HOST_OS),linux)
   ifeq ($(WITH_DEXPREOPT),)
@@ -39,21 +39,21 @@ TARGET_GLOBAL_CPPFLAGS += -DANDROID_MULTI_SIM
 COMMON_GLOBAL_CFLAGS += -DQCOM_MEDIA_DISABLE_BUFFER_SIZE_CHECK
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := X9180,V9180,U9180,N9180,x9180,v9180,u9180,n9180
+TARGET_OTA_ASSERT_DEVICE := NX404H,NX405H,nx404h,nx405h
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
-TARGET_KERNEL_CONFIG := msm8926-ne501j_defconfig
+TARGET_KERNEL_CONFIG := msm8926-nx404h_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_X9180.c
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_NX404H.c
 TARGET_UNIFIED_DEVICE := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 12582912
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 12582912
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1048576000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1258291200
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1992294400
 
 # Recovery
@@ -61,7 +61,7 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/recovery.fstab
 
 BOARD_VENDOR := zte-qcom
 
-TARGET_SPECIFIC_HEADER_PATH := device/ZTE/X9180/include
+TARGET_SPECIFIC_HEADER_PATH := device/NUBIA/NX404H/include
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8226
@@ -78,9 +78,6 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=softfp
 
-#TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-#TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 TARGET_NO_BOOTLOADER := true
@@ -89,14 +86,7 @@ TARGET_NO_RADIOIMAGE := true
 # Enables Adreno RS driver
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
-# Shader cache config options
-# Maximum size of the  GLES Shaders that can be cached for reuse.
-# Increase the size if shaders of size greater than 12KB are used.
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
-
-# Maximum GLES shader cache size for each app to store the compiled shader
-# binaries. Decrease the size if RAM or Flash Storage size is a limitation
-# of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Kernel
@@ -105,7 +95,7 @@ BOARD_KERNEL_BASE := 0x0000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x2000000 --tags_offset 0x1e00000
-TARGET_KERNEL_SOURCE := kernel/ZTE/X9180
+TARGET_KERNEL_SOURCE := kernel/NUBIA/NX404H
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
@@ -136,9 +126,6 @@ TARGET_PROVIDES_CAMERA_HAL := true
 
 # CMHW
 ifneq ($(CM_VERSION),)
-    BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
-endif
-ifneq ($(BLISS_VERSION),)
     BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
 endif
 ifneq ($(MK_VERSION),)
@@ -189,7 +176,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 -include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-    device/ZTE/X9180/sepolicy
+    device/NUBIA/NX404H/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     servicemanager.te \
@@ -222,25 +209,3 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 TARGET_USES_QCOM_WCNSS_QMI := true
 TARGET_PROVIDES_WCNSS_QMI := true
 BOARD_HAS_QCOM_WLAN_SDK := true
-
-# inherit from the proprietary version
--include vendor/ZTE/X9180/BoardConfigVendor.mk
-
-ifneq ($(BLISS_VERSION),)
-    # BlissPop Config Flags
-    BLISS_WIPE_CACHES := 0
-    TARGET_TC_ROM := 4.8-sm
-    TARGET_TC_KERNEL := 4.8-sm
-    BLISSIFY := true
-    BLISS_O3 := true
-    BLISS_STRICT := false
-    BLISS_GRAPHITE := true
-    BLISS_KRAIT := true
-    BLISS_PIPE := true
-    TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
-    TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
-
-    #SaberMod
-    -include vendor/bliss/config/sm.mk
-endif
-

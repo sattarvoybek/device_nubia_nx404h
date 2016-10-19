@@ -15,16 +15,16 @@
 #
 
 # call the proprietary setup
-$(call inherit-product, vendor/ZTE/X9180/X9180-vendor.mk)
+$(call inherit-product, vendor/NUBIA/NX404H/NX404H-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    kernel/ZTE/X9180/drivers/staging/prima/firmware_bin/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
-    kernel/ZTE/X9180/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    kernel/ZTE/X9180/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+    kernel/NUBIA/NX404H/drivers/staging/prima/firmware_bin/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
+    kernel/NUBIA/NX404H/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    kernel/NUBIA/NX404H/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 # Inherit from msm8226-common
-$(call inherit-product, device/ZTE/X9180/msm8226.mk)
+$(call inherit-product, device/NUBIA/NX404H/NX404H.mk)

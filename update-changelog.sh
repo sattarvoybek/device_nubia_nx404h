@@ -5,7 +5,7 @@ PATCHBASE=$(dirname "$MYABSPATH")
 
 cd "$PATCHBASE"
 
-export Changelog=etc/CHANGELOG-X9180.txt
+export Changelog=etc/CHANGELOG-NX404H.txt
 
 if [ -f $Changelog ];
 then

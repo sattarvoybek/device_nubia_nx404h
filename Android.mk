@@ -21,7 +21,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),X9180)
+ifeq ($(TARGET_DEVICE),NX404H)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
@@ -63,20 +63,6 @@ $(FIRMWARE_MBA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MBA_SYMLINKS)
-
-FIRMWARE_MODEM_IMAGES := \
-    modem.b00 modem.b01 modem.b02 modem.b03 modem.b05 modem.b08 \
-    modem.b11 modem.b13 modem.b15 modem.b16 modem.b17 modem.b18 \
-    modem.b19 modem.b20 modem.b21 modem.b22 modem.b25 modem.mdt
-
-FIRMWARE_MODEM_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_MODEM_IMAGES)))
-$(FIRMWARE_MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Modem Firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MODEM_SYMLINKS)
 
 FIRMWARE_WCNSS_IMAGES := \
     wcnss.b00 wcnss.b01 wcnss.b02 wcnss.b04 \

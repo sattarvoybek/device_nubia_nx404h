@@ -16,10 +16,14 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-$(call inherit-product-if-exists, vendor/ZTE/X9180/X9180-vendor.mk)
+$(call inherit-product-if-exists, vendor/NUBIA/NX404H/X9180-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Changelog
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/etc/CHANGELOG-NX404H.txt:system/etc/CHANGELOG-NX404H.txt
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -61,9 +65,6 @@ TARGET_SCREEN_WIDTH := 720
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# call hwui memory config
-# $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -231,7 +232,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.rc \
-    fstab.X9180 \
+    fstab.NX404H \
     fstab.sd \
     fstab.int \
     fstab.zram_64 \
@@ -350,7 +351,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/usr/keylayout/Generic.kl:system/usr/keylayout/Generic.kl
 
-# Changelog
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/etc/CHANGELOG-X9180.txt:system/etc/CHANGELOG-X9180.txt
 

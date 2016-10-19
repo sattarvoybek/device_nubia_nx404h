@@ -1,4 +1,4 @@
-# system.prop for X9180
+# system.prop for NX404H
 
 # radio
 rild.libargs=-d /dev/smd0
@@ -36,20 +36,18 @@ persist.factory.nfc=false
 persist.factory.receiver_volume=10
 persist.fuse_sdcard=false
 
-persist.radio.multisim.config=dsds
+persist.sys.bluetooth.name=NUBIA
 
-persist.sys.bluetooth.name=ZTE V5
-
-persist.sys.timezone=Europe/Moskow
-persist.sys.wifi.p2pname=ZTE V5
-persist.sys.wifi.softapname=ZTE V5
+persist.sys.timezone=Asia/Tashkent
+persist.sys.wifi.p2pname=NUBIA
+persist.sys.wifi.softapname=NUBIA
 
 ril.subscription.types=NV,RUIM
 
 ro.hdmi.enable=true
 
-ro.product.model=X9180
-ro.product.device=X9180
+ro.product.model=NX404H
+ro.product.device=NX404H
 
 telephony.lteOnCdmaDevice=1
 

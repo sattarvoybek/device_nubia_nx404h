@@ -7,8 +7,8 @@ LOCAL_PATH := $(call my-dir)
 ## Imported from the original makefile...
 KERNEL_CONFIG := $(KERNEL_OUT)/.config
 
-MSM8926_DTS_FILE = $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8926-ne501j.dts
-MSM8926_DTS_FILENAME = msm8926-ne501j.dts
+MSM8926_DTS_FILE = $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8926-nx404h.dts
+MSM8926_DTS_FILENAME = msm8926-nx404h.dts
 DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(MSM8926_DTS_FILENAME)))
 ZIMG_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%-zImage,$(MSM8926_DTS_FILENAME)))
 KERNEL_ZIMG = $(KERNEL_OUT)/arch/arm/boot/zImage
