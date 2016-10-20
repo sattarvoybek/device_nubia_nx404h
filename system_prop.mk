@@ -16,7 +16,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.buffer.size.kb=32 \
     audio.offload.min.duration.secs=30 \
     audio.offload.gapless.enabled=true \
-    av.offload.enable=false \
+    audio.offload.video=false \
     persist.audio.lowlatency.rec=false \
     audio.offload.disable=1
 

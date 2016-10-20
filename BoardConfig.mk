@@ -32,7 +32,6 @@ TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
 
 # QCRIL
 TARGET_RIL_VARIANT := caf
-SIM_COUNT := 2
 TARGET_GLOBAL_CFLAGS += -DANDROID_MULTI_SIM
 TARGET_GLOBAL_CPPFLAGS += -DANDROID_MULTI_SIM
 
@@ -47,7 +46,7 @@ TARGET_KERNEL_CONFIG := msm8926-nx404h_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_NX404H.c
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_NX404H.cpp
 TARGET_UNIFIED_DEVICE := true
 
 # Partitions
@@ -177,18 +176,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 BOARD_SEPOLICY_DIRS += \
     device/NUBIA/NX404H/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    servicemanager.te \
-    dnsmasq.te \
-    wpa.te \
-    debuggerd.te \
-    sysinit.te \
-    kernel.te \
-    untrusted_app.te \
-    platform_app.te \
-    healthd.te \
-    installd.te
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true

@@ -16,7 +16,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-$(call inherit-product-if-exists, vendor/NUBIA/NX404H/X9180-vendor.mk)
+$(call inherit-product-if-exists, vendor/NUBIA/NX404H/NX404H-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -84,6 +84,7 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/etc/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/etc/audio_policy.conf:system/etc/audio_policy.conf \
@@ -92,6 +93,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     libxml2 \
+    libboringssl-compat \
     camera.msm8226 \
     Camera2
 

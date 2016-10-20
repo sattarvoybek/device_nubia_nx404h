@@ -43,6 +43,7 @@ persist.sys.wifi.p2pname=NUBIA
 persist.sys.wifi.softapname=NUBIA
 
 ril.subscription.types=NV,RUIM
+ro.telephony.ril.config=simactivation
 
 ro.hdmi.enable=true
 

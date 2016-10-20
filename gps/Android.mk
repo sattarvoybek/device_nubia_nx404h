@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 The MoKee OpenSource Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,5 +14,8 @@
 # limitations under the License.
 #
 
-GPS_DIRS=core etc libloc_api_50001 platform_lib_abstractions utils
-include $(call all-named-subdir-makefiles,$(GPS_DIRS))
+LOCAL_PATH := $(call my-dir)
+
+ifeq ($(TARGET_DEVICE),armani)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
+endif
