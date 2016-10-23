@@ -202,24 +202,23 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libdashplayer \
     libdivxdrmdecrypt \
+     libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
-    libOmxMux \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc \
+    libOmxVidcCommon \
+    libqcmediaplayer \
+    libstagefright_soft_flacdec \
     libHevcSwDecoder \
     libstagefrighthw \
     qcmediaplayer
 
 PRODUCT_PACKAGES += \
     X9180Settings
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
 
 PRODUCT_BOOT_JARS += \
     qcom.fmradio

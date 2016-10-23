@@ -202,8 +202,8 @@
     <bool name="config_speed_up_audio_on_mt_calls">true</bool>
     
     <!-- Configuration to restart radio upon PDP_DEACTIVATE with
-         error cause as Regular deactivation(36). -->
-    <bool name="config_radio_reset_on_regular_deactivation">false</bool>
+         error cause as Regular deactivation(36). 
+    <bool name="config_radio_reset_on_regular_deactivation">false</bool> -->
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
@@ -225,8 +225,8 @@
          The default is false. -->
     <bool name="config_lidControlsSleep">false</bool>
 
-    <!-- Boolean indicating whether Softap requires reloading AP firmware -->
-    <bool name="config_wifiApFirmwareReload">false</bool>
+    <!-- Boolean indicating whether Softap requires reloading AP firmware 
+    <bool name="config_wifiApFirmwareReload">false</bool>-->
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
         on the headphone/microphone jack. When false use the older uevent framework. -->
@@ -297,8 +297,8 @@
 
     <!-- Default value for proximity check on screen wake
          NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)
-    -->
-    <bool name="config_proximityCheckOnWake">true</bool>
+    
+    <bool name="config_proximityCheckOnWake">true</bool>-->
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
@@ -344,14 +344,14 @@
     <bool name="config_enableMultiUserUI">false</bool>
 
     <!-- Defines the system property to set for performance profile xe: sys.cpu.modes. Leave it
-         blank if the device do not support performance profiles -->
-    <string name="config_perf_profile_prop" translatable="false">sys.perf.profile</string>
+         blank if the device do not support performance profiles 
+    <string name="config_perf_profile_prop" translatable="false">sys.perf.profile</string>-->
 
     <!-- When config_perf_profile_prop is defined, this value MUST be the index of
          one of the listes values in frameworks/base/core/res/res/values/cm_arrays.xml
          for "perf_profile_values" array. Leave it blank if the device do not support
-         performance profiles  -->
-    <string name="config_perf_profile_default_entry" translatable="false">1</string>
+         performance profiles 
+    <string name="config_perf_profile_default_entry" translatable="false">1</string>  -->
 
     <!-- The list absolute paths of jar/apk files containing the device specific handlers,
     delimited by File.pathSeparator, which defaults to ":" on Android -->
@@ -361,8 +361,8 @@
     com.android.internal.os.DeviceKeyHandler interface. -->
     <string name="config_deviceKeyHandlerClass" translatable="false">com.cyanogenmod.settings.device.KeyHandler</string>
 
-    <!-- Configuration to enable non-default PDP during IWLAN -->
-    <bool name="config_feature_iwlan_enabled">true</bool>
+    <!-- Configuration to enable non-default PDP during IWLAN 
+    <bool name="config_feature_iwlan_enabled">true</bool>-->
 
     <!-- Screen brightness when dozing. -->
     <integer name="config_screenBrightnessDoze">17</integer>

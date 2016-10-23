@@ -1,4 +1,31 @@
 ====================
+     10-23-2016
+====================
+
+
+====================
+     10-22-2016
+====================
+
+
+   * packages/apps/CarrierConfig/
+6fe76ed national roaming: NRJ (France) can also use Bouygues
+
+   * packages/apps/Settings/
+7e8822f Add device maintainer (#565)
+
+====================
+     10-21-2016
+====================
+
+
+   * hardware/qcom/audio-caf/msm8937/
+a8a6e1f audio: hal: Ensure correct configuration of ADM during HIFI playback.
+a879bb4 hal: allow VOIP standby to enable correct device for subsequent usecases
+b673740 DO NOT MERGE Fix AudioEffect reply overflow
+dffee2a policy_hal: Move global effects to correct output
+
+====================
      10-20-2016
 ====================
 
@@ -11,19 +38,4 @@
    * packages/apps/Settings/
 db84c50 Merge pull request #564 from Asderdd/marshmallow
 7f60e01 Fix fc settings caused by syntax errors
-
-====================
-     10-18-2016
-====================
-
-
-====================
-     10-17-2016
-====================
-
-
-====================
-     10-16-2016
-====================
-
 
