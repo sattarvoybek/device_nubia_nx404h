@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-13.0" />
+    <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-13.0" />
   <project name="CyanogenMod/android_hardware_qcom_fm" path="hardware/qcom/fm" remote="github" revision="cm-13.0" />
-  <project name="CyanogenMod/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="cm-13.0"/>
-  <project name="sattarvoybek/kernel_nubia_nx404h.git" path="kernel/NUBIA/NX404H" remote="github" revision="cm-12.1" />
-  <project name="sattarvoybek/device_nubia_nx404h.git" path="device/NUBIA/NX404H" remote="github" revision="cm-12.1" />
-  <project name="sattarvoybek/device_nubia_nx404h_proprietary.git" path="vendor/NUBIA/NX404H" remote="github"revision="cm-12.1" />
+  <project name="sattarvoybek/kernel_nubia_nx404h"                  path="kernel/NUBIA/NX404H"           remote="github" revision="cm-12.1" />
+  <project name="sattarvoybek/device_nubia_nx404h"                  path="device/NUBIA/NX404H"           remote="github" revision="cm-12.1" />
+  <project name="sattarvoybek/device_nubia_nx404h_proprietary"      path="vendor/NUBIA/NX404H"           remote="github" revision="cm-12.1" />
+
+   <project name="CyanogenMod/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="cm-13.0"/>
+  <remove-project name="CyanogenMod/android_packages_apps_ExactCalculator" />
+  <project name="CyanogenMod/android_packages_apps_Calculator"      path="packages/apps/Calculator"       remote="github" revision="cm-11.0"/>
 </manifest>
